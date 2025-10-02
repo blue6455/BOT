@@ -29,8 +29,8 @@ async def on_ready():
     print(f"✅ Le bot {bot.user} est connecté et prêt !")
     send_and_delete_message.start()  # démarrer la tâche automatique
 
-# Tâche qui envoie un message tous les 3 jours et le supprime après 1 seconde
-@tasks.loop(hours=72)  # 72h = 3 jours
+# Tâche qui envoie un message tous les jours et le supprime après 1 seconde
+@tasks.loop(days=1)
 async def send_and_delete_message():
     for channel_id in CHANNEL_ID:
         channel = bot.get_channel(channel_id)
