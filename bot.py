@@ -16,7 +16,7 @@ intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # ID du salon où envoyer le message
-CHANNEL_ID = 1423238426194477156  # <-- remplace par l'ID de ton salon
+CHANNEL_ID = [1423238426194477156,1423253196570103910,1423254712236376214,1423255075538599957,1423255403487039590]  # <-- remplace par l'ID de ton salon
 
 @bot.event
 async def on_ready():
